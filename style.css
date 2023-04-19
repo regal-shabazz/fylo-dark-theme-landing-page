@@ -53,7 +53,7 @@ header ul li a:hover {
   color: hsl(176, 68%, 64%);
 }
 
-/* main - homepage */
+/* main - homepage **/
 
 #homepage {
   background-image: url("./images/bg-curvy-mobile.svg");
@@ -76,7 +76,7 @@ header ul li a:hover {
 }
 
 #homepage .container {
-  max-width: 500px;
+  max-width: 700px;
   padding: 3rem 0 3rem;
 }
 
@@ -95,7 +95,7 @@ main article {
 #homepage article h1 {
   color: hsl(0, 0%, 100%);
   line-height: 1.5;
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
 #homepage article p {
@@ -134,6 +134,7 @@ main article {
 
 #about-page .container {
   padding: 1.5rem 0;
+  max-width: 1200px;
 }
 
 #about-page .features-grid img {
@@ -304,6 +305,7 @@ footer {
 
 footer .container {
   padding: 15rem 0 5rem;
+  max-width: 1200px;
 }
 
 footer .container > img {
@@ -394,6 +396,9 @@ footer .socials a {
 }
 
 @media screen and (min-width: 768px) {
+  #homepage article h1 {
+    font-size: 3rem;
+  }
 
   #about-page .features-grid {
     display: grid;
