@@ -1,0 +1,506 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 14px;
+}
+
+body {
+  background-color: hsl(217, 28%, 15%);
+  font-family: 'Raleway', sans-serif;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  padding: 1.5rem 0;
+}
+
+header .logo {
+  width: 80px;
+  display: inline-block;
+}
+
+header ul {
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+header ul li a {
+  text-decoration: none;
+  color: hsl(0, 0%, 100%, 0.6);
+  text-transform: capitalize;
+  font-size: 0.8rem;
+  transition: color .5s
+}
+
+header ul li a:hover {
+  color: hsl(176, 68%, 64%);
+}
+
+/* main - homepage */
+
+#homepage {
+  background-image: url("./images/bg-curvy-mobile.svg");
+  background-size: contain;
+  background-position-y: 65%;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+#homepage::after {
+  content: "";
+  width: 100%;
+  height: 50%;
+  position: absolute;
+  background-color: hsl(218, 28%, 13%);
+  bottom: -20%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  z-index: -1;
+}
+
+#homepage .container {
+  max-width: 500px;
+  padding: 3rem 0 3rem;
+}
+
+main .homepage-hero {
+  width: 100%;
+  max-width: 800px;
+  display: block;
+  margin: 0 auto;
+}
+
+main article {
+  text-align: center;
+  padding: 1.5rem 0;
+}
+
+#homepage article h1 {
+  color: hsl(0, 0%, 100%);
+  line-height: 1.5;
+  font-size: 1.5rem;
+}
+
+#homepage article p {
+  color: hsla(0, 0%, 100%, 0.6);
+  line-height: 1.7;
+  margin: 1.5rem 0;
+}
+
+#homepage article button {
+  padding: 1rem 5rem;
+  border-radius: 40px;
+  outline: none;
+  border: none;
+  background-image: linear-gradient(
+    90deg,
+    hsl(176, 68%, 64%),
+    hsl(198, 60%, 50%)
+  );
+}
+
+
+
+#homepage article button a {
+  text-decoration: none;
+  color: hsl(0, 0%, 100%);
+  text-transform: capitalize;
+  font-weight: 700;
+}
+
+/*  main - features */
+
+#about-page {
+  background-color: hsl(218, 28%, 13%);
+  position: relative; /* for the email sign up container */
+}
+
+#about-page .container {
+  padding: 1.5rem 0;
+}
+
+#about-page .features-grid img {
+  display: block;
+  margin: 0 auto 2rem;
+}
+
+#about-page .features-grid h3 {
+  color: hsl(0, 0%, 100%);
+  font-size: 1.5rem;
+}
+
+#about-page .features-grid p {
+  line-height: 1.7;
+  color: hsl(0, 0%, 100%, 0.6);
+  margin: 1rem 0 3rem;
+}
+
+#about-page .more-info-flex {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10rem;
+}
+
+.more-info-flex > img {
+  width: 100%;
+  display: block;
+  margin: 0 auto 3rem;
+}
+
+.more-info-flex h2 {
+  color: hsl(0, 0%, 100%);
+  font-size: 1.4rem;
+}
+
+.more-info-flex p {
+  text-align: left;
+  color: hsl(0, 0%, 100%, 0.6);
+  margin: 1.5rem 0;
+  line-height: 1.7;
+}
+
+.more-info-flex a {
+  color: hsl(176, 68%, 64%);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid hsl(176, 68%, 64%);
+  width: fit-content;
+}
+
+#testimonials {
+  display: grid;
+  gap: 2rem;
+  width: 85%;
+  margin: 0 auto 20rem;
+}
+
+#testimonials > span {
+  background-color: hsl(219, 30%, 18%);
+  padding: 1.5rem;
+  border-radius: 5px;
+}
+
+#testimonials > span:nth-child(1) {
+  position: relative;
+}
+
+#testimonials > span:nth-child(1)::before {
+  content: "";
+  background-image: url("./images/bg-quotes.png");
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  top: -10%;
+  left: 2%;
+  transform: translate(2%, -10%);
+}
+
+#testimonials span > p {
+  color: hsl(0, 0%, 100%, 0.6);
+  line-height: 1.7;
+}
+
+#testimonials .author-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+#testimonials .author-name {
+  display: grid;
+  gap: 0.3rem;
+}
+
+.author-name h4 {
+  color: hsl(0, 0%, 100%);
+}
+
+.author-name p {
+  color: hsl(0, 0%, 100%, 0.6);
+}
+
+#testimonials img {
+  width: 40px;
+  border-radius: 50%;
+  display: block;
+}
+
+.email-sign-up {
+  text-align: center;
+  background-color: hsl(217, 28%, 15%);
+  padding: 2rem 2rem;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.56);
+  position: absolute;
+  left: 0;
+  bottom: -5%;
+  margin: 0 5%;
+}
+
+.email-sign-up h3 {
+  color: hsl(0, 0%, 100%);
+}
+
+.email-sign-up > p {
+  color: hsl(0, 0%, 100%, 0.6);
+  line-height: 1.7;
+  margin: 1rem 0 2rem;
+}
+
+.email-sign-up input,
+.email-sign-up button {
+  display: block;
+  width: 100%;
+  padding: 1rem 2rem;
+  border-radius: 30px;
+}
+
+.email-sign-up input {
+  font-size: 0.8rem;
+  color: #000;
+  outline: none;
+  border: none;
+}
+
+.email-sign-up button {
+  text-transform: capitalize;
+  margin-top: 1rem;
+  color: hsl(0, 0%, 100%);
+  font-weight: 700;
+  background-image: linear-gradient(
+    90deg,
+    hsl(176, 68%, 64%),
+    hsl(198, 60%, 50%)
+  );
+  border: none;
+}
+
+footer {
+  background-color: hsl(216, 53%, 9%);
+  color: hsl(0, 0%, 100%, 0.6);
+}
+
+footer .container {
+  padding: 15rem 0 5rem;
+}
+
+footer .container > img {
+  margin-left: 0.5rem;
+  margin-bottom: 3rem;
+}
+
+footer .flex-content {
+  display: grid;
+  gap: 1.5rem;
+}
+
+footer .flex-content > span {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  line-height: 1.7;
+}
+
+footer .flex-content > div:nth-child(2) {
+  display: grid;
+  gap: 1.5rem;
+  margin-bottom: 4rem;
+}
+
+footer .flex-content > div:nth-child(2) > span {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+footer .flex-content > div:nth-child(3),
+footer .flex-content > div:nth-child(4) {
+  display: grid;
+  text-transform: capitalize;
+  gap: 1.5rem;
+}
+
+footer .flex-content > div:nth-child(3) {
+  margin-bottom: 3rem;
+}
+
+footer .flex-content > div:nth-child(4) {
+  margin-bottom: 4rem;
+}
+
+footer .socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+footer .socials a {
+  color: hsl(0, 0%, 100%);
+  text-decoration: none;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 481px) {
+  #about-page .features-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2rem;
+    margin: 0 auto 5rem;
+
+  }
+  .more-info-flex > img {
+    width: 60%;
+    display: block;
+    margin: 0 auto 3rem;
+  }
+
+  .email-sign-up {
+    left: 50%;
+    transform: translate(-50%);
+    width: 65%;
+    padding: 2.5rem 2rem;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 768px) {
+
+  #about-page .features-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2rem;
+    max-width: 60%;
+    margin: 0 auto 5rem;
+  }
+
+  #about-page .features-grid p {
+    margin: 0;
+  }
+
+  .more-info-flex article {
+    width: 80%;
+    text-align: left;
+    margin: 0 auto;
+  }
+
+  .email-sign-up {
+    left: 50%;
+    transform: translate(-50%);
+    bottom: -4%;
+    width: 80%;
+    padding: 2.5rem 3rem;
+    margin: 0 auto;
+  }
+
+  .email-sign-up span {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .email-sign-up input {
+    width: 64%;
+  }
+
+  .email-sign-up button {
+    width: unset;
+    margin-top: 0;
+    padding: 1rem 2rem;
+  }
+
+  footer .flex-content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+
+
+  #about-page .more-info-flex {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 5rem;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .more-info-flex > img {
+    width: 50%;
+    display: block;
+    margin: 0 auto 3rem;
+  }
+
+  .more-info-flex article {
+    width: 40%;
+    text-align: left;
+  }
+
+  .more-info-flex h2 {
+    font-size: 3rem;
+    padding-right: 2rem;
+  }
+
+  #testimonials {
+    grid-template-columns: repeat(3, 1fr);
+  } 
+
+  .email-sign-up {
+    left: 50%;
+    bottom: -3%;
+    transform: translate(-50%);
+    width: 65%;
+    padding: 2.5rem 4rem;
+    margin: 0 auto;
+  }
+
+  .email-sign-up input {
+    width: 67%;
+  }
+
+  .email-sign-up button {
+    width: 30%;
+    margin-top: 0;
+    padding: 1rem 1rem;
+  }
+
+  footer .flex-content > span {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    line-height: 1.7;
+    width: 30%;
+  }
+}
